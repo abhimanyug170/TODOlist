@@ -45,7 +45,7 @@ export const fetchTodo = id => {
 
 export const markCompleted = id => {
   return async dispatch => {
-    const response = await todoApi.patch(`/mark-complete/${id}`);
+    await todoApi.patch(`/mark-complete/${id}`);
     dispatch({
       type: MARK_COMPLETED,
       payload: id
