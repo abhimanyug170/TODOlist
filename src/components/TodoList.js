@@ -24,7 +24,7 @@ class TodoList extends Component {
   }
 
   renderButtons(todo) {
-    if (todo.isPending) {
+    if (todo.is_pending) {
       return (
         <div className="col-md-6">
           <button
@@ -59,7 +59,7 @@ class TodoList extends Component {
   renderList() {
     return this.props.todos.map(todo => {
       let className = `shadow list-group-item mt-3 col-10 ${this.renderDisplay(
-        todo.isPending
+        todo.is_pending
       )}`;
       return (
         <div className={className} key={todo._id}>
